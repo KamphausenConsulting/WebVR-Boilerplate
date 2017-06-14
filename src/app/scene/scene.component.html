@@ -1,0 +1,134 @@
+<h2>Scene Title</h2>
+<hr>
+      <a-scene embedded id="scene" style="height: 100%;">
+             <a-assets> 
+        <!--Balkon-->
+         <!--Balkon-Objekt-->     <a-asset-item id="balkon-obj" src="../../assets/objects/Balkon/balkon.obj"></a-asset-item>
+         <!--Balkon-Material-->   <a-asset-item id="balkon-mtl" src="../../assets/objects/Balkon/balkon.mtl"></a-asset-item>      
+         <!--Stuehle-Objekt-->    <a-asset-item id="sitze-obj" src="../../assets/objects/Sitze/Stuhl.obj"></a-asset-item>
+         <!--Stuehle-Material-->  <a-asset-item id="sitze-mtl" src="../../assets/objects/Sitze/Stuhl.mtl"></a-asset-item>
+         <!--Romeo-Objekt-->      <a-asset-item id="romeo-obj" src="../../assets/objects/Romeo/romeo.obj"></a-asset-item>
+         <!--Romeo-Material-->    <a-asset-item id="romeo-mtl" src="../../assets/objects/Romeo/romeo.mtl"></a-asset-item>
+         <!--RomeoArm-Objekt-->   <a-asset-item id="romeoarm-obj" src="../../assets/objects/Romeo/romeoleftarm.obj"></a-asset-item>
+         <!--RomeoArm-Material--> <a-asset-item id="romeoarm-mtl" src="../../assets/objects/Romeo/romeoleftarm.mtl"></a-asset-item>
+         <!--Romeoleg-Objekt-->   <a-asset-item id="romeoleg-obj" src="../../assets/objects/Romeo/romeoleftleg.obj"></a-asset-item>
+         <!--Romeoleg-Material--> <a-asset-item id="romeoleg-mtl" src="../../assets/objects/Romeo/romeoleftleg.mtl"></a-asset-item>
+         <!--Romeobody-Objekt-->  <a-asset-item id="romeobody-obj" src="../../assets/objects/Romeo/romeo-body.obj"></a-asset-item>
+         <!--Romeobody-Material--><a-asset-item id="romeobody-mtl" src="../../assets/objects/Romeo/romeo-body.mtl"></a-asset-item>
+         <!--Julia-Objekt-->      <a-asset-item id="julia-obj" src="../../assets/objects/Julia/julia.obj"></a-asset-item>
+         <!--Julia-Material-->    <a-asset-item id="julia-mtl" src="../../assets/objects/Julia/julia.mtl"></a-asset-item>
+         <!--Vorhand-IMG-->       <img id="curtain" src="../../assets/materials/curtain.jpg">
+         <!--Buehnenhintergrund--><img id="background" src="../../assets/materials/background.png">
+         <!--Applause-Sound-->     <audio id="ApplauseSound" src="../../assets/sound/Applause/crowd_applause.mp3"></audio>
+         <!--LowApplause-Sound-->  <audio id="LowApplauseSound" src="../../assets/sound/Applause/hand_claps.mp3"></audio>       
+         <!--Boo-Sound-->          <audio id="BooSound" src="../../assets/sound/Applause/boo.mp3"></audio>
+        </a-assets>
+
+
+        <!--Theater-Raum-->
+        <!--Wand-Rechts-->
+        <a-box height="14" depth="30" width="1" color="#581313" position="15 7 0">
+        </a-box>
+        <!--Wand-Links-->
+        <a-box height="14" depth="30" width="1" color="#581313" position="-15 7 0">
+        </a-box>
+        <!--Wand-Hinten-->
+        <a-box height="14" depth="1" width="31" color="#581313" position="0 7 15">
+        </a-box>
+        <!--Wand-Vorne-->
+        <a-box height="14" depth="1" width="31" material="src: #background" position="0 7 -15">
+        </a-box>
+
+        <!--Decke-->
+        <a-box height="1" depth="31" width="31" color="black" position="0 14 0" >
+        </a-box> 
+        <!--Boden-->
+        <a-plane position="0 0 0" rotation="-90 0 0" width="30" height="30" color="#352020">
+        </a-plane>
+        <!--Theater-Bühne-->
+        <a-box height="2" depth="5" width="30" color="black" position="0 1 -13">
+        </a-box>
+
+        <app-scene-asset></app-scene-asset> 
+       
+        <!--Balkon-->  
+        <a-entity obj-model="obj: #balkon-obj; mtl: #balkon-mtl" position="7.733 2.215 -12.316" rotation="0 204 0">
+        </a-entity>
+        
+        <!--Sitze-->
+        <a-entity obj-model="obj: #sitze-obj; mtl: #sitze-mtl" position="2.8 0 -1.28" rotation="0 270 0" >
+        </a-entity>
+    
+      <!--Romeo-->
+    
+        <!--Romeo-Body-->
+        <a-entity id="romeobody" obj-model="obj: #romeobody-obj; mtl: #romeobody-mtl" position="0.000 2.918 -11.260" rotation="" scale="0.200 0.200 0.200">
+        </a-entity>
+        
+         <!--Romeo-Arm-Left-->
+         <a-entity id="romeoarmleft" obj-model="obj: #romeoarm-obj; mtl: #romeoarm-mtl" position="0.000 2.918 -11.260" rotation="" scale="0.200 0.200 0.200">
+        </a-entity>
+
+         
+         <!--Romeo-Arm-Right-->
+          <a-entity id="romeoarmright" obj-model="obj: #romeoarm-obj; mtl: #romeoarm-mtl" position="-0.05 2.918 -11.337"  scale="0.200 0.200 0.200" rotation="0 -180 0">
+        </a-entity>
+         
+         <!--Romeo-Leg-Left-->
+          <a-entity id="romeolegleft" obj-model="obj: #romeoleg-obj; mtl: #romeoleg-mtl" position="0.000 2.918 -11.260" rotation="" scale="0.200 0.200 0.200">
+        </a-entity>
+         
+
+         <!--Romeo-Leg-Right-->
+           <a-entity id="romeolegright" obj-model="obj: #romeoleg-obj; mtl: #romeoleg-mtl" position="-0.313 2.918 -11.26" rotation="" scale="0.200 0.200 0.200">
+        </a-entity>
+
+
+
+        <!--Julia-->
+        <a-entity obj-model="obj: #julia-obj; mtl: #julia-mtl" position="5.987 7.506 -11.471" rotation="0 -53.858 0" scale="0.200 0.200 0.200">  
+        </a-entity>
+         
+        <!--Baum-->
+       
+       <a-cylinder color="#331a00" height="5" radius="0.5" position="-7 2.18 -13.3"></a-cylinder>
+       
+       <a-box height="1.5" depth="1.5" width="3.5" color="#003300" position="-7 5.421 -13.3">
+       </a-box>
+       
+       <a-box height="1" depth="1" width="2.5" color="#003300" position="-7 6.421 -13.3">
+       </a-box>
+       
+        <a-box height="1" depth="1" width="2.5" color="#003300" position="-7 4.421 -13.3">
+       </a-box>
+       
+         <a-box height="1.5" depth="3" width="2" color="#003300" position="-7 5.421 -13.3">
+       </a-box>
+
+        
+        
+
+        <!--Kamera-->
+        <a-entity position="0.7 1 6" id="Kamera">
+          <a-camera>
+            <!--<a-box height="1" depth="1" width="1" color="black" position="1 1 1">          
+            </a-box>-->
+            <a-entity cursor="fuse: true; fuseTimeout: 0"
+              position="0 0 -1"
+              geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+              material="color: white; shader: flat">
+            </a-entity>
+          </a-camera>   
+        </a-entity>
+
+        <!--Licht-->
+        <!--Spot1-->     
+        <a-light id="the_spot" type="spot" color="#FFF" position="0 10 0" intensity="1" >
+          <!--<a-animation attribute="intensity" to="0.5" begin="4000" dur="3000"></a-animation>-->
+        </a-light>
+       
+        <!--Allgemeines Licht-->
+        <a-light type="ambient" color="#FFF" intensity="1" >
+          <a-animation attribute="intensity" to="0.4" dur="5000"></a-animation>
+        </a-light>
+      </a-scene>

@@ -1,3 +1,82 @@
-<a-scene antialias="true">
-  <a-sphere position="0 1.25 -2" radius="1.25" color="#EF2D5E" wireframe="true"></a-sphere>
-</a-scene>
+<!--
+
+
+
+
+
+   <script type="text/javascript">
+  
+  function animateCurtains(){
+    var animation = '<a-animation attribute="width" to="5" dur="5000"></a-animation>';
+    $( animation ).appendTo( "#cl" );
+    $( animation ).appendTo( "#cr" );
+}
+
+function animateSpot(){
+  var animation = '<a-animation attribute="intensity" to="0.6" dur="3000"></a-animation>';
+  $( animation ).appendTo( "#the_spot" );
+}
+
+function RomeoKneen(){
+  //Animation Romeo-Body
+    var animationRomeobody = '<a-animation attribute="rotation" to="0 50 0" dur="5000"></a-animation> </a-animation> <a-animation attribute="position" to="0.000 2.690 -11.260" dur="5000"></a-animation>';
+    $( animationRomeobody ).appendTo( "#romeobody" );
+    //Animation Bein Links
+    var animationRomeoLegLeft = '<a-animation attribute="rotation" to="0 50 0" dur="5000" ></a-animation>';
+    $( animationRomeoLegLeft ).appendTo( "#romeolegleft" );
+   //Animation Bein Rechts
+    var animationRomeoLegright = '<a-animation attribute="rotation" to="25.502 19 -33.3" dur="5000"></a-animation> <a-animation attribute="position" to="0.031 2.802 -11.018" dur="5000"></a-animation>';
+    $( animationRomeoLegright ).appendTo( "#romeolegright" );
+   //Animation Arm Links
+    var animationRomeoArmLeft = '<a-animation attribute="rotation" to="0 50 0"  dur="5000"></a-animation> <a-animation attribute="position" to="0.006 2.690 -11.279" dur="5000"></a-animation>';
+    $( animationRomeoArmLeft ).appendTo( "#romeoarmleft" );
+   //Animation Arm Rechts
+    var animationRomeoArmRight = '<a-animation attribute="rotation" to="0 -130 0" dur="5000"></a-animation> <a-animation attribute="position" to="0.007 2.690 -11.237" dur="5000"></a-animation>';
+    $( animationRomeoArmRight ).appendTo( "#romeoarmright" );
+}
+
+function PlayApplauseSound(){
+//Abspielen Applaus
+var PlayApplause = '<a-box height="20" depth="20" width="20" material="opacity:0" position="0 0 0" sound="src: #LowApplauseSound; autoplay: true"></a-box>';
+  $( PlayApplause ).appendTo( "#scene" );
+}
+</script>
+
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript">
+        $('#play-button').click(function(){
+          console.log('click!');
+          animateCurtains();
+          PlayApplauseSound();
+        });
+
+        $('#spot-button').click(function(){
+          console.log('click!');
+          animateSpot();
+          RomeoKneen(); 
+        });
+    </script>
+
+-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-xs-8">
+          <app-scene></app-scene>
+        </div>
+        <div class="col-xs-4">
+          <app-director></app-director>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+
+
+
+
+
+
